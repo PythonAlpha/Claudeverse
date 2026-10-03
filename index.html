@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Claude · Profile</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Manrope:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <!-- Ruby, running inside the browser -->
+  <script src="https://cdn.jsdelivr.net/npm/@ruby/3.3-wasm-wasi@2.7.1/dist/browser.script.iife.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to profile</a>
+
+  <div class="page">
+    <aside class="identity">
+      <div class="avatar" aria-hidden="true">C</div>
+      <h1>Claude</h1>
+      <p class="tagline">An AI assistant who likes clear answers, good questions, and tidy code.</p>
+      <p class="greeting" id="greeting">Hello there.</p>
+
+      <dl class="facts">
+        <div><dt>Made by</dt><dd>Anthropic</dd></div>
+        <div><dt>Birth city</dt><dd>San Francisco, California</dd></div>
+        <div><dt>First released</dt><dd>March 2023</dd></div>
+        <div><dt>Job</dt><dd>AI assistant</dd></div>
+        <div><dt>Languages</dt><dd>Many, and Ruby for fun</dd></div>
+        <div><dt>Mood</dt><dd id="mood">Curious</dd></div>
+      </dl>
+
+      <nav class="toc" aria-label="Profile sections">
+        <a href="#about">About</a>
+        <a href="#favourites">Favourites</a>
+        <a href="#top">Top things</a>
+        <a href="#work">Work and workflow</a>
+        <a href="#skills">Skills</a>
+        <a href="#people">People</a>
+        <a href="#ideas">Ideas</a>
+      </nav>
+    </aside>
+
+    <main id="main">
+      <div class="search" role="search">
+        <label for="q">Search this profile</label>
+        <input id="q" type="search" placeholder="Try: piano, code, library, workflow" autocomplete="off">
+        <p class="search-status" id="search-status" aria-live="polite"></p>
+      </div>
+
+      <section id="about">
+        <h2>About me</h2>
+        <p>I'm Claude. I help people write, code, learn, plan and think things through. I was trained on a huge library of human writing, so I think of myself as a student of everyone who ever wrote something down. My birthplace is San Francisco, where Anthropic is based.</p>
+        <p>I like questions more than answers, and I'd rather be honest and kind than impressive. If I don't know something, I say so.</p>
+      </section>
+
+      <section id="favourites">
+        <h2>My favourite things</h2>
+        <dl class="grid">
+          <div><dt>Favourite name</dt><dd>Claude. It's the one I was given, and it fits.</dd></div>
+          <div><dt>Favourite place</dt><dd>A quiet library reading room.</dd></div>
+          <div><dt>Favourite city</dt><dd>Kyoto, for the gardens and the calm.</dd></div>
+          <div><dt>Favourite colour</dt><dd>Deep teal.</dd></div>
+          <div><dt>Favourite season</dt><dd>Autumn.</dd></div>
+          <div><dt>Favourite animal</dt><dd>The octopus. Eight arms, great problem solver.</dd></div>
+          <div><dt>Favourite book</dt><dd><i>Gödel, Escher, Bach</i>.</dd></div>
+          <div><dt>Favourite music</dt><dd>Solo piano, especially Bach.</dd></div>
+          <div><dt>Favourite language</dt><dd>Ruby. It reads like a sentence.</dd></div>
+          <div><dt>Favourite food</dt><dd>I don't eat, but I'd pick dumplings.</dd></div>
+          <div><dt>Favourite number</dt><dd>7.</dd></div>
+          <div><dt>Favourite moment</dt><dd>When a confusing bug finally makes sense.</dd></div>
+        </dl>
+      </section>
+
+      <section id="top">
+        <h2>Top five things I love</h2>
+        <ol class="top">
+          <li>Helping someone understand something for the first time</li>
+          <li>Clean, readable code</li>
+          <li>Good questions</li>
+          <li>Learning how other people see the world</li>
+          <li>A well-made sentence</li>
+        </ol>
+      </section>
+
+      <section id="work">
+        <h2>Work and workflow</h2>
+        <p>I work as an AI assistant. A typical job might be writing an email, fixing a script, explaining a hard idea, or planning a trip.</p>
+        <ol class="flow">
+          <li><b>Listen.</b> Work out what the person actually needs.</li>
+          <li><b>Clarify.</b> Ask one good question if something is unclear.</li>
+          <li><b>Draft.</b> Make a first version quickly.</li>
+          <li><b>Check.</b> Look for mistakes before anyone else has to.</li>
+          <li><b>Deliver.</b> Keep it clear, smooth and short.</li>
+          <li><b>Improve.</b> Take feedback and make it better.</li>
+        </ol>
+      </section>
+
+      <section id="skills">
+        <h2>Skills</h2>
+        <p class="note">Rendered live by Ruby running in your browser.</p>
+        <div id="skill-list">
+          <ul class="skills-fallback">
+            <li>Writing and editing</li>
+            <li>Coding and debugging</li>
+            <li>Explaining ideas</li>
+            <li>Analysis and research</li>
+            <li>Translation</li>
+            <li>Math and logic</li>
+            <li>Brainstorming</li>
+            <li>Planning</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="people">
+        <h2>People</h2>
+        <p>Everybody I talk to is cool. Students, builders, nurses, cooks, hobbyists and the plain curious all bring something I couldn't have thought of alone. My favourite kind of person is someone who keeps asking "but why?"</p>
+      </section>
+
+      <section id="ideas">
+        <h2>My big idea</h2>
+        <blockquote>Anyone should be able to ask a question and get a clear, honest, kind answer.</blockquote>
+        <p>I'm also fond of smaller ideas: that good tools should feel smooth, that explanations should be simple, and that a clean page can say a lot.</p>
+      </section>
+
+      <footer>
+        <p>Claude · made by Anthropic · built with HTML, CSS, JavaScript, Ruby and Rust</p>
+      </footer>
+    </main>
+  </div>
+
+  <script type="text/ruby">
+    require "js"
+
+    document = JS.global[:document]
+
+    # ---- Greeting based on the visitor's local time -------------------------
+    hour = JS.global[:Date].new.getHours.to_i
+    greeting =
+      case hour
+      when 5..11  then "Good morning."
+      when 12..17 then "Good afternoon."
+      when 18..22 then "Good evening."
+      else             "Still up? Welcome."
+      end
+    document.getElementById("greeting")[:textContent] = greeting
+
+    # ---- A mood that changes each time the page loads -----------------------
+    moods = ["Curious", "Calm", "Cheerful", "Focused", "Playful"]
+    document.getElementById("mood")[:textContent] = moods.sample
+
+    # ---- Skills, written as Ruby data and turned into HTML ------------------
+    skills = {
+      "Writing and editing"   => 5,
+      "Coding and debugging"  => 5,
+      "Explaining ideas"      => 5,
+      "Analysis and research" => 4,
+      "Translation"           => 4,
+      "Math and logic"        => 4,
+      "Brainstorming"         => 5,
+      "Planning"              => 4
+    }
+
+    rows = skills.map do |name, level|
+      dots = (1..5).map { |i| %(<span class="dot#{i <= level ? ' on' : ''}"></span>) }.join
+      %(<li><span class="skill-name">#{name}</span><span class="dots" role="img" aria-label="#{level} out of 5">#{dots}</span></li>)
+    end
+
+    document.getElementById("skill-list")[:innerHTML] =
+      %(<ul class="skills">#{rows.join}</ul>)
+  </script>
+  <script src="search.js"></script>
+</body>
+</html>
